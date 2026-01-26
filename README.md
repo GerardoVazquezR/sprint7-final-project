@@ -1,131 +1,78 @@
-Proyecto de Análisis de Clientes – ConnectaTel
-🎯 Objetivo del proyecto
+📊 Proyecto ConnectaTel – Análisis de Datos de Telecomunicaciones
+🧠 Descripción General
 
-El objetivo de este proyecto es analizar el comportamiento de uso de los clientes de ConnectaTel para identificar patrones relevantes, segmentar a los usuarios y generar insights accionables para el negocio. A partir del análisis, se busca entender:
+Este proyecto analiza datos de uso de clientes de ConnectaTel, una empresa de telecomunicaciones ficticia, con el objetivo de identificar patrones de consumo, segmentos de clientes y oportunidades de negocio basadas en llamadas, mensajes y duración de uso.
 
-Cómo utilizan los clientes los servicios de mensajes y llamadas.
+El análisis combina limpieza de datos, exploración estadística y generación de insights ejecutivos orientados a la toma de decisiones estratégicas.
 
-Qué diferencias existen entre planes (Básico vs Premium).
+🎯 Objetivos del Proyecto
 
-Qué segmentos de clientes son más valiosos.
+Evaluar la calidad de los datos y tratar valores nulos de forma adecuada.
 
-Qué oportunidades existen para mejorar o crear nuevos planes comerciales.
+Analizar el comportamiento de uso de los clientes.
 
-🗂️ Datasets utilizados
+Identificar segmentos de clientes relevantes.
 
-El análisis se realizó utilizando los siguientes datasets:
+Detectar outliers y evaluar su impacto en el negocio.
 
-1️⃣ users
+Traducir hallazgos técnicos en recomendaciones accionables para stakeholders.
 
-Contiene información demográfica y de suscripción de los usuarios:
+📁 Contenido del Archivo
 
-user_id: identificador único del usuario
+El notebook incluye los siguientes pasos:
 
-plan: tipo de plan contratado (Básico / Premium)
+Carga y exploración inicial de datos
 
-age: edad del usuario
+Revisión de estructura y tipos de variables
 
-city: ciudad del usuario
+Análisis de valores nulos y calidad de datos
 
-2️⃣ usage
+Estadística descriptiva
 
-Registra el historial de uso de los servicios:
+Visualización de patrones de uso
 
-user_id: identificador del usuario
+Detección de outliers
 
-type: tipo de interacción (call o text)
+Insight Ejecutivo para Stakeholders
 
-duration: duración de la llamada (solo para call)
+🛠️ Herramientas y Librerías Utilizadas
 
-length: longitud del mensaje (solo para text)
+Python 3
 
-🔍 Etapas del análisis realizadas
+Pandas
 
-Exploración inicial de datos
+NumPy
 
-Revisión de estructura, tipos de variables y valores faltantes.
+Matplotlib
 
-Tratamiento de valores nulos
+Seaborn
 
-Identificación de nulos estructurales en duration y length.
+📌 Principales Hallazgos
 
-Clasificación de estos nulos como MAR (Missing At Random).
+Los valores nulos detectados son estructurales y dependen del tipo de servicio (call vs text).
 
-Construcción de métricas de uso por usuario
+El nivel de uso es más relevante que la edad para segmentar clientes.
 
-Total de mensajes enviados.
+Existen usuarios de alto consumo que representan oportunidades claras de monetización.
 
-Total de llamadas realizadas.
+Los outliers no son errores, sino clientes de alto valor.
 
-Total de minutos de llamadas.
+💡 Recomendaciones Clave
 
-Unificación de datasets
+Implementar planes diferenciados según nivel de uso.
 
-Merge de métricas de uso con información de usuarios.
+Desarrollar estrategias de upselling para usuarios de uso medio.
 
-Análisis estadístico y visualización
+Fortalecer programas de fidelización para heavy users.
 
-Histogramas y boxplots para entender distribuciones y detectar outliers.
+Utilizar segmentación basada en comportamiento real, no solo demografía.
 
-Análisis comparativo por tipo de plan.
+📈 Impacto para el Negocio
 
-Identificación de outliers
+Este análisis permite a ConnectaTel:
 
-Uso del método IQR.
+Optimizar su portafolio de planes.
 
-Decisión de conservar outliers por representar comportamiento real.
+Incrementar ingresos mediante personalización.
 
-Segmentación de clientes
-
-Segmentación por nivel de uso: Bajo, Medio y Alto uso.
-
-Segmentación por edad: Joven, Adulto y Adulto Mayor.
-
-Insight ejecutivo
-
-Traducción de los hallazgos a conclusiones y recomendaciones de negocio.
-
-▶️ Cómo ejecutar el notebook
-Opción recomendada: Google Colab
-
-Abre Google Colab: https://colab.research.google.com/
-
-Sube el notebook (.ipynb) del proyecto.
-
-Asegúrate de subir también los archivos de datos (users.csv, usage.csv).
-
-Ejecuta las celdas en orden de arriba hacia abajo.
-
-Ejecución local (opcional)
-
-Instala Python 3.9 o superior.
-
-Instala las dependencias necesarias:
-
-pip install pandas numpy matplotlib seaborn
-
-Abre el notebook con Jupyter Notebook o Jupyter Lab.
-
-🔁 Guía breve de reproducción
-
-Para reproducir el análisis desde cero:
-
-Cargar los datasets users y usage.
-
-Ejecutar las celdas de limpieza y tratamiento de nulos.
-
-Construir las métricas agregadas de uso por usuario.
-
-Realizar el merge con la información de usuarios.
-
-Generar las visualizaciones y análisis estadísticos.
-
-Ejecutar la segmentación por uso y edad.
-
-Revisar el análisis ejecutivo final.
-
-📌 Resultado final
-
-El proyecto entrega una visión clara del comportamiento de los clientes, identificando segmentos clave y oportunidades comerciales que pueden apoyar la toma de decisiones estratégicas en ConnectaTel.
-
-📈 Este análisis puede ampliarse incorporando métricas de ingresos, churn o evolución temporal del uso.
+Reducir churn enfocándose en clientes de alto valor.
