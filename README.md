@@ -1,78 +1,73 @@
-📊 Proyecto ConnectaTel – Análisis de Datos de Telecomunicaciones
-🧠 Descripción General
+# 📊 Proyecto ConnectaTel – Análisis de Comportamiento de Clientes
 
-Este proyecto analiza datos de uso de clientes de ConnectaTel, una empresa de telecomunicaciones ficticia, con el objetivo de identificar patrones de consumo, segmentos de clientes y oportunidades de negocio basadas en llamadas, mensajes y duración de uso.
+## 📌 Descripción
+Este proyecto analiza el comportamiento de uso de clientes de ConnectaTel con el objetivo de:
+- Evaluar la calidad de los datos
+- Identificar segmentos de clientes
+- Detectar patrones de consumo
+- Proponer mejoras estratégicas en la oferta de planes
 
-El análisis combina limpieza de datos, exploración estadística y generación de insights ejecutivos orientados a la toma de decisiones estratégicas.
+El análisis se enfoca en mensajes, llamadas, minutos de llamada y características demográficas.
 
-🎯 Objetivos del Proyecto
+---
 
-Evaluar la calidad de los datos y tratar valores nulos de forma adecuada.
+## 🧠 Objetivos del análisis
+- Detectar y corregir problemas de calidad de datos
+- Analizar patrones de uso por tipo de plan
+- Identificar segmentos valiosos de clientes
+- Generar insights accionables para negocio
 
-Analizar el comportamiento de uso de los clientes.
+---
 
-Identificar segmentos de clientes relevantes.
+## 📂 Estructura del proyecto
+- `*.ipynb` → Notebook principal con el análisis exploratorio
+- Visualizaciones de:
+  - Mensajes por plan
+  - Llamadas por plan
+  - Minutos de llamada por plan
+- Estadísticos descriptivos y detección de outliers
 
-Detectar outliers y evaluar su impacto en el negocio.
+---
 
-Traducir hallazgos técnicos en recomendaciones accionables para stakeholders.
+## 🛠️ Herramientas utilizadas
+- Python
+- Pandas
+- NumPy
+- Matplotlib / Seaborn
+- Jupyter Notebook
 
-📁 Contenido del Archivo
+---
 
-El notebook incluye los siguientes pasos:
+## ⚠️ Problemas de calidad de datos detectados
+- Valores inválidos en edad (ej. -999)
+- Alto porcentaje de valores faltantes en métricas de uso
+- Presencia de outliers extremos
 
-Carga y exploración inicial de datos
+Estos problemas fueron identificados y considerados en el análisis.
 
-Revisión de estructura y tipos de variables
+---
 
-Análisis de valores nulos y calidad de datos
+## 📈 Principales insights
+- La mayoría de los usuarios tiene un uso moderado
+- Los usuarios Premium presentan mayor consumo
+- El uso extremo es poco frecuente pero relevante
+- Existen oportunidades claras de upselling y nuevos planes
 
-Estadística descriptiva
+---
 
-Visualización de patrones de uso
+## 🚀 Recomendaciones
+- Crear planes intermedios
+- Optimizar la comunicación del valor del plan Premium
+- Monitorear usuarios de consumo extremo
+- Usar métricas robustas (mediana, percentiles) en lugar de promedios
 
-Detección de outliers
+---
 
-Insight Ejecutivo para Stakeholders
+## 👤 Autor
+Gerardo Vazquez
 
-🛠️ Herramientas y Librerías Utilizadas
+## 📅 Fecha
+2026
 
-Python 3
 
-Pandas
 
-NumPy
-
-Matplotlib
-
-Seaborn
-
-📌 Principales Hallazgos
-
-Los valores nulos detectados son estructurales y dependen del tipo de servicio (call vs text).
-
-El nivel de uso es más relevante que la edad para segmentar clientes.
-
-Existen usuarios de alto consumo que representan oportunidades claras de monetización.
-
-Los outliers no son errores, sino clientes de alto valor.
-
-💡 Recomendaciones Clave
-
-Implementar planes diferenciados según nivel de uso.
-
-Desarrollar estrategias de upselling para usuarios de uso medio.
-
-Fortalecer programas de fidelización para heavy users.
-
-Utilizar segmentación basada en comportamiento real, no solo demografía.
-
-📈 Impacto para el Negocio
-
-Este análisis permite a ConnectaTel:
-
-Optimizar su portafolio de planes.
-
-Incrementar ingresos mediante personalización.
-
-Reducir churn enfocándose en clientes de alto valor.
